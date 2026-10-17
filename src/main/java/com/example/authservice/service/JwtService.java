@@ -1,6 +1,6 @@
-package com.example.authservicedemo.service;
+package com.example.authservice.service;
 
-import com.example.authservicedemo.entity.User;
+import com.example.authservice.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;

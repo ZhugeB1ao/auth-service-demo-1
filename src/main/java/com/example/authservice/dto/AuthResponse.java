@@ -1,4 +1,4 @@
-package com.example.authservicedemo.dto;
+package com.example.authservice.dto;
 
 public record AuthResponse (
         String accessToken,

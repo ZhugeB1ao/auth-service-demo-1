@@ -1,8 +1,8 @@
-package com.example.authservicedemo.controller;
+package com.example.authservice.controller;
 
-import com.example.authservicedemo.config.CustomUserDetails;
-import com.example.authservicedemo.dto.*;
-import com.example.authservicedemo.service.AuthService;
+import com.example.authservice.config.CustomUserDetails;
+import com.example.authservice.dto.*;
+import com.example.authservice.service.AuthService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,8 @@
-package com.example.authservicedemo.service;
+package com.example.authservice.service;
 
-import com.example.authservicedemo.dto.*;
-import com.example.authservicedemo.entity.*;
-import com.example.authservicedemo.repository.*;
+import com.example.authservice.dto.*;
+import com.example.authservice.entity.*;
+import com.example.authservice.repository.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
-package com.example.authservicedemo.config;
+package com.example.authservice.config;
 
-import com.example.authservicedemo.repository.UserRepository;
-import com.example.authservicedemo.service.JwtService;
+import com.example.authservice.repository.UserRepository;
+import com.example.authservice.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

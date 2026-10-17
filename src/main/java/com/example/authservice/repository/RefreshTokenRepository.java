@@ -1,6 +1,6 @@
-package com.example.authservicedemo.repository;
+package com.example.authservice.repository;
 
-import com.example.authservicedemo.entity.RefreshToken;
+import com.example.authservice.entity.RefreshToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
