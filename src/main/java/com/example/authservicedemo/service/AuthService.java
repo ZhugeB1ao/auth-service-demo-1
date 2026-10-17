@@ -69,6 +69,21 @@ public class AuthService {
     }
 
     @Transactional
+    public void logout(RefreshTokenRequest req) {
+        String tokenHash = hashSha256(req.refreshToken());
+
+        refreshTokenRepository.findByTokenHash(tokenHash).ifPresent(token -> {
+            token.setRevokedAt(Instant.now());
+            refreshTokenRepository.save(token);
+
+            userRepository.findById(token.getUserId()).ifPresent(user -> {
+                user.setTokenVersion(user.getTokenVersion() + 1);
+                userRepository.save(user);
+            });
+        });
+    }
+
+    @Transactional
     public AuthResponse refreshToken(RefreshTokenRequest req) {
         String tokenHash = hashSha256(req.refreshToken());
 

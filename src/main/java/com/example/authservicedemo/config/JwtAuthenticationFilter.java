@@ -32,14 +32,14 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter{
     ) throws ServletException, IOException {
         String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
 
-        if(authHeader != null && authHeader.startsWith("Bearer")) {
+        if(authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
             String username = jwtService.extractUsername(token);
 
             if(username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 userRepository.findByUsername(username)
                         .filter(user -> jwtService.isTokenValid(token, user))
-                        .map(CustomerUserDetails::new)
+                        .map(CustomUserDetails::new)
                         .ifPresent(principal -> {
                             var authToken = new UsernamePasswordAuthenticationToken(
                                     principal,

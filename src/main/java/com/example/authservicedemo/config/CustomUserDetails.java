@@ -12,7 +12,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Getter
-public class CustomerUserDetails implements UserDetails{
+public class CustomUserDetails implements UserDetails{
     private final User user;
 
     @Override
@@ -43,6 +43,7 @@ public class CustomerUserDetails implements UserDetails{
     public boolean isCredentialsNonExpired() {
         return true;
     }
+
     @Override
     public boolean isEnabled() {
         return user.isActive();
